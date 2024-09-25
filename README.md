@@ -25,3 +25,11 @@ Para realizar la ejecución del proyecto, previamente debe tener instalado node 
 5. **Abre tu navegador** y navega a `http://localhost:5173/` para ver la aplicación en funcionamiento.
 
 ¡Y eso es todo! Ahora deberías poder visualizar el proyecto realizado con React, Vite y Tailwind CSS
+
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+**Nota:** Actualmente está en proceso de revisión el responsive de la página, se recomienda utilizar una dimensión 1800 x 1169
