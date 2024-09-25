@@ -11,8 +11,8 @@ const Contact = () => {
           BURGER
         </h1>
       </div>
-      <div className="container-fluid flex-row columns-2 justify-center py-10">
-        <div className="container">
+      <div className="container-fluid flex flex-row columns-2 justify-center pt-5">
+        <div className="container overflow-hidden">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8320.55751373594!2d-74.17950832372362!3d4.593963848782315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1727209940284!5m2!1ses!2sco"
             loading="lazy"
@@ -63,8 +63,8 @@ const Contact = () => {
               </label>
               <input
                 type="text"
-                id="fullName"
-                name="fullName"
+                id="phoneNumber"
+                name="phoneNumber"
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-lg"
                 required
               />
