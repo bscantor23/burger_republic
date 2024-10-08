@@ -31,27 +31,21 @@ const Users = () => {
       header: "Avatar",
     }),
     columnHelper.accessor("fullName", {
-      cell: (info) => <span>{info.getValue()}</span>,
       header: "Nombre completo",
     }),
     columnHelper.accessor("email", {
-      cell: (info) => <span>{info.getValue()}</span>,
       header: "Correo",
     }),
     columnHelper.accessor("address", {
-      cell: (info) => <span>{info.getValue()}</span>,
       header: "Dirección",
     }),
     columnHelper.accessor("phoneNumber", {
-      cell: (info) => <span>{info.getValue()}</span>,
       header: "Teléfono",
     }),
     columnHelper.accessor("supervisor", {
-      cell: (info) => <span>{info.getValue()}</span>,
       header: "Supervisor",
     }),
     columnHelper.accessor("jobTitle", {
-      cell: (info) => <span>{info.getValue()}</span>,
       header: "Cargo",
     }),
   ];
@@ -71,12 +65,12 @@ const Users = () => {
   });
 
   return (
-    <div className="mt-[125px] p-2 container-fluid mx-20">
+    <div className="mt-28 p-2 md:min-h-[1300px] lg:min-h-[1200px] container-fluid px-10 md:px-20">
       <div className="pb-10">
         <h1 className="text-primary text-3xl py-5">Usuarios</h1>
         <hr />
       </div>
-      <div className="flex justify-between mb-2 py-5">
+      <div className="flex md:flex-row flex-col md:justify-between justify-center  mb-2 py-5 gap-5">
         <div className="w-full flex items-center gap-1">
           <FaSearch />
           <Search
@@ -85,26 +79,28 @@ const Users = () => {
             onKeyDown={(value: any) => {
               setGlobalFilter(String(value));
             }}
-            className="p-2 bg-transparent outline-none border-b-2 w-1/5 focus:w-1/3 duration-300 border-primary"
+            className="p-2 bg-transparent outline-none border-b-2 w-full lg:w-1/2 focus:w-1/2 duration-300 border-primary"
             placeholder="Búsqueda"
           />
         </div>
-        <button className="w-[200px] hover:bg-green-500 text-green-500 hidden md:block font-semibold hover:text-white rounded-xl border-2 border-green-500 px-6 py-2 duration-200">
+        <button className="w-[300px] self-center hover:bg-green-500 text-green-500  md:block font-semibold hover:text-white rounded-xl border-2 border-green-500 px-6 py-2 duration-200">
           Crear Usuario
         </button>
       </div>
-      <div className="md:min-h-[700px]">
-        <div className="max-h-[700px] overflow-y-auto">
+      <div className="md:min-h-[750px]">
+        <div className="max-h-[750px] overflow-y-auto">
           <table className="w-full text-left text-normal">
             <thead>
               {table.getHeaderGroups().map((headerGroup) => (
-                <tr key={headerGroup.id}>
+                <tr key={headerGroup.id} className="h-16">
                   {headerGroup.headers.map((header) => (
                     <th key={header.id} className="capitalize px-3.5 py-2">
-                      {flexRender(
-                        header.column.columnDef.header,
-                        header.getContext()
-                      )}{" "}
+                      <div className="whitespace-nowrap">
+                        {flexRender(
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
+                      </div>
                     </th>
                   ))}
                   <th className="text-center">Acciones</th>
@@ -116,10 +112,15 @@ const Users = () => {
                 ? table.getRowModel().rows.map((row, i) => (
                     <tr
                       key={row.id}
-                      className={`${i % 2 === 0 ? "bg-gray-50" : "bg-white"}`}
+                      className={`min-h-18 ${
+                        i % 2 === 0 ? "bg-gray-50" : "bg-white"
+                      }`}
                     >
                       {row.getVisibleCells().map((cell) => (
-                        <td key={cell.id} className="px-3.5 py-2">
+                        <td
+                          key={cell.id}
+                          className="px-3.5 py-2 whitespace-nowrap"
+                        >
                           {flexRender(
                             cell.column.columnDef.cell,
                             cell.getContext()

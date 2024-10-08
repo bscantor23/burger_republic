@@ -8,14 +8,14 @@ interface LoginProps {
 
 const Login: React.FC<LoginProps> = (props: LoginProps) => {
   return (
-    <div className="container-fluid columns-2 flex justify-between items-center md:min-h-[calc(100vh-80px)]">
-      <div className="container flex flex-col text-center max-w-[1000px]">
+    <div className="container-fluid lg:columns-2 flex flex-col lg:flex-row justify-between items-center md:min-h-[1050px] md:h-screen">
+      <div className="container mt-40 lg:mt-0 flex flex-col text-center">
         <h1 className="font-bold text-black text-8xl py-10">LOGIN</h1>
         <h2 className="font-regular font-montserrat text-normal text-2xl pb-3">
           ¡Bienvenido de nuevo! Por favor ingrese sus datos
         </h2>
-        <div className="container pt-5">
-          <form className="space-y-3">
+        <div className="container-fluid flex flex-row justify-center p-5">
+          <form className="space-y-3 max-w-[500px] w-full">
             <div>
               <label
                 htmlFor="email"
@@ -70,7 +70,7 @@ const Login: React.FC<LoginProps> = (props: LoginProps) => {
         </div>
       </div>
 
-      <div className="w-full flex justify-end">
+      <div className="w-full lg:flex justify-end hidden">
         <img src={loginImage} alt="Principal" className="md:w-[700px]" />
       </div>
     </div>

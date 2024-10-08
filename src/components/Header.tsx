@@ -1,7 +1,12 @@
 import { MenuMock } from "../mockData/menu-mock";
 
-import { PiShoppingCartThin } from "react-icons/pi";
-import { MdMenu } from "react-icons/md";
+import {
+  MdShoppingCart,
+  MdMenu,
+  MdOutlineLogout,
+  MdOutlineLogin,
+} from "react-icons/md";
+
 import { useState } from "react";
 import ResponsiveMenu from "./ResponsiveMenu";
 
@@ -12,26 +17,27 @@ interface HeaderProps {
   setIsLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
+const Header: React.FC<HeaderProps> = ({ isLoggedIn, setIsLoggedIn }) => {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <nav className="fixed top-0 w-full bg-white z-10">
-        <div className="container px-0 flex justify-between items-center py-10">
-          <div className="flex items-center gap-2">
+      <nav className="fixed top-0 w-full bg-slate-50 z-20 shadow-md py-8">
+        <div className="container-fluid px-10 lg:px-32 flex justify-between items-center">
+          <div className="flex items-center px-5">
             <Link
               to="/"
               className="text-4xl text-primary font-poppins font-bold whitespace-nowrap w-min-{320}"
+              onClick={() => setOpen(false)}
             >
               BURGER REPUBLIC
             </Link>
           </div>
-          <div className="container gap-x-10 flex justify-end items-center">
-            <div className="hidden md:block">
-              <ul className="flex items-center gap-6 text-normal">
+          <div className="container-fluid gap-4 flex justify-end items-center">
+            <div className="hidden lg:block">
+              <ul className="flex items-center gap-4 text-normal">
                 {MenuMock.filter(
-                  (item: any) => item.permission === props.isLoggedIn
+                  (item: any) => item.permission === isLoggedIn
                 ).map((item: any) => (
                   <li key={item.id}>
                     <Link
@@ -44,34 +50,46 @@ const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
                 ))}
               </ul>
             </div>
+            <div className="md:hidden">
+              <Link
+                to={isLoggedIn ? "/" : "/login"}
+                className="text-2xl hover:animate-pulse text-primary hover:text-orange-800 duration-200"
+                onClick={() => {
+                  setOpen(false);
+                  isLoggedIn ? setIsLoggedIn(false) : null;
+                }}
+              >
+                <span>
+                  {isLoggedIn ? (
+                    <MdOutlineLogout className="inline-block" />
+                  ) : (
+                    <MdOutlineLogin className="inline-block" />
+                  )}
+                </span>
+              </Link>
+            </div>
             <div className="flex items-center gap-4">
-              {props.isLoggedIn ? (
-                <Link
-                  to="/"
-                  className="hover:bg-primary text-primary hidden md:block font-semibold hover:text-white rounded-xl border-2 border-primary px-6 py-2 duration-200"
-                  onClick={() => props.setIsLoggedIn(false)}
-                >
-                  Cerrar Sesión
-                </Link>
-              ) : (
-                <Link
-                  to="/login"
-                  className="hover:bg-primary text-primary hidden md:block font-semibold hover:text-white rounded-xl border-2 border-primary px-6 py-2 duration-200"
-                >
-                  Iniciar Sesión
-                </Link>
-              )}
-              <button className="text-2xl hover:bg-primary hover:text-white rounded-full p-2 duration-200">
-                <PiShoppingCartThin className="text-3xl" />
+              <Link
+                to={isLoggedIn ? "/" : "/login"}
+                className="hover:bg-primary min-w-[150px] text-center text-primary hidden md:block font-semibold hover:text-white rounded-xl border-2 border-primary py-2 duration-200"
+                onClick={() => (isLoggedIn ? setIsLoggedIn(isLoggedIn) : null)}
+              >
+                <span>{isLoggedIn ? "Cerrar sesión" : "Iniciar sesión"}</span>
+              </Link>
+              <button
+                className="text-2xl hover:animate-pulse text-primary hover:text-orange-800 duration-200"
+                onClick={() => setOpen(false)}
+              >
+                <MdShoppingCart className="text-3xl" />
               </button>
             </div>
-            <div className="md:hidden" onClick={() => setOpen(!open)}>
+            <div className="lg:hidden" onClick={() => setOpen(!open)}>
               <MdMenu className="text-4xl" />
             </div>
           </div>
         </div>
       </nav>
-      <ResponsiveMenu open={open} />
+      <ResponsiveMenu isLoggedIn={isLoggedIn} open={open} setOpen={setOpen} />
     </>
   );
 };

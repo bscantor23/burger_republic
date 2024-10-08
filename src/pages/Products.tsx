@@ -10,7 +10,7 @@ import {
 import { FaEye, FaEdit, FaTrash, FaSearch } from "react-icons/fa";
 import { useState } from "react";
 import Search from "../components/Search";
-import { Product, ProductMock } from "../mockData/product-mock";
+import { Product, ProductsMock } from "../mockData/product-mock";
 
 const Products = () => {
   const columnHelper = createColumnHelper<Product>();
@@ -31,27 +31,27 @@ const Products = () => {
       header: "Imagen",
     }),
     columnHelper.accessor("title", {
-      cell: (info) => <span>{info.getValue()}</span>,
       header: "Título",
     }),
     columnHelper.accessor("price", {
       cell: (info) => (
         <span>
-          ${Number(info.getValue()).toLocaleString("es-ES", {
+          ${" "}
+          {Number(info.getValue()).toLocaleString("es-ES", {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2,
+            useGrouping: true,
           })}
         </span>
       ),
       header: "Precio",
     }),
     columnHelper.accessor("description", {
-      cell: (info) => <span>{info.getValue()}</span>,
       header: "Descripción",
     }),
   ];
 
-  const [data] = useState(() => [...ProductMock]);
+  const [data] = useState(() => [...ProductsMock]);
   const [globalFilter, setGlobalFilter] = useState("");
 
   const table = useReactTable({
@@ -66,12 +66,12 @@ const Products = () => {
   });
 
   return (
-    <div className="mt-[125px] p-2 container-fluid mx-20">
+    <div className="mt-[125px] p-2 container-fluid px-10 md:px-20">
       <div className="pb-10">
         <h1 className="text-primary text-3xl py-5">Productos</h1>
         <hr />
       </div>
-      <div className="flex justify-between mb-2 py-5">
+      <div className="flex md:flex-row flex-col md:justify-between justify-center  mb-2 py-5 gap-5">
         <div className="w-full flex items-center gap-1">
           <FaSearch />
           <Search
@@ -79,26 +79,28 @@ const Products = () => {
             onKeyDown={(value: any) => {
               setGlobalFilter(String(value));
             }}
-            className="p-2 bg-transparent outline-none border-b-2 w-1/5 focus:w-1/3 duration-300 border-primary"
+            className="p-2 bg-transparent outline-none border-b-2 w-full lg:w-1/2 focus:w-1/2 duration-300 border-primary"
             placeholder="Búsqueda"
           />
         </div>
-        <button className="w-[200px] hover:bg-green-500 text-green-500 hidden md:block font-semibold hover:text-white rounded-xl border-2 border-green-500 px-6 py-2 duration-200">
+        <button className="w-[300px] self-center hover:bg-green-500 text-green-500  md:block font-semibold hover:text-white rounded-xl border-2 border-green-500 px-6 py-2 duration-200">
           Crear Producto
         </button>
       </div>
-      <div className="md:min-h-[700px]">
-        <div className="max-h-[700px] overflow-y-auto">
+      <div className="md:min-h-[750px]">
+        <div className="max-h-[750px] overflow-y-auto">
           <table className="w-full text-left text-normal">
             <thead>
               {table.getHeaderGroups().map((headerGroup) => (
                 <tr key={headerGroup.id}>
                   {headerGroup.headers.map((header) => (
                     <th key={header.id} className="capitalize px-3.5 py-2">
-                      {flexRender(
-                        header.column.columnDef.header,
-                        header.getContext()
-                      )}{" "}
+                      <div className="whitespace-nowrap">
+                        {flexRender(
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
+                      </div>
                     </th>
                   ))}
                   <th className="text-center">Acciones</th>
@@ -113,7 +115,10 @@ const Products = () => {
                       className={`${i % 2 === 0 ? "bg-gray-50" : "bg-white"}`}
                     >
                       {row.getVisibleCells().map((cell) => (
-                        <td key={cell.id} className="px-3.5 py-2">
+                        <td
+                          key={cell.id}
+                          className="px-3.5 py-2 whitespace-nowrap"
+                        >
                           {flexRender(
                             cell.column.columnDef.cell,
                             cell.getContext()

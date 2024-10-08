@@ -14,7 +14,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <div className="overflow-x-hidden">
+    <div id="principal-container" className="overflow-x-hidden relative">
       <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -30,6 +30,7 @@ function App() {
         <Route path="/users" element={<Users />}></Route>
         <Route path="/products" element={<Products />}></Route>
       </Routes>
+
       <Footer />
     </div>
   );

@@ -2,7 +2,7 @@ import coronaImage from "../assets/corona.svg";
 
 const Contact = () => {
   return (
-    <div className="container-fluid flex flex-col text-center  md:min-h-[calc(100vh-80px)] mt-[125px]">
+    <div className="container-fluid flex flex-col text-center md:min-h-[1150px] mt-24">
       <div>
         <div className="relative mb-32 flex justify-center">
           <img src={coronaImage} alt="" className="absolute top-0 ml-72 w-40" />
@@ -11,16 +11,16 @@ const Contact = () => {
           BURGER
         </h1>
       </div>
-      <div className="container-fluid flex flex-row columns-2 justify-center pt-5">
-        <div className="container overflow-hidden">
+      <div className="container-fluid gap-10 px-10 flex flex-col lg:flex-row sm:columns-2 justify-evenly pt-5">
+        <div className="container-fluid w-full">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8320.55751373594!2d-74.17950832372362!3d4.593963848782315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1727209940284!5m2!1ses!2sco"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="w-full h-[calc((100vw/2)-300px)] shadow-lg"
+            className="w-full h-[500px] md:h-[600px] shadow-lg"
           />
         </div>
-        <div className="container">
+        <div className="container-fluid w-full">
           <form className="space-y-4">
             <div>
               <label

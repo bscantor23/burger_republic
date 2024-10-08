@@ -5,6 +5,11 @@ import hamburguesa_4 from "../assets/hamburguesa_4.png";
 import hamburguesa_5 from "../assets/hamburguesa_5.png";
 import hamburguesa_6 from "../assets/hamburguesa_6.png";
 
+import bebida_1 from "../assets/bebida_1.jpg";
+import bebida_2 from "../assets/bebida_2.jpg";
+import bebida_3 from "../assets/bebida_3.jpg";
+import bebida_4 from "../assets/bebida_4.jpg";
+
 export interface Product {
   id?: number;
   img: string;
@@ -13,7 +18,7 @@ export interface Product {
   description: string;
 }
 
-export const ProductMock: Product[] = [
+export const ProductsMock: Product[] = [
   {
     id: 1,
     img: hamburguesa_1,
@@ -61,5 +66,40 @@ export const ProductMock: Product[] = [
     price: 29000,
     description:
       "Hamburguesa con carne de res, queso cheddar, bacon crujiente y una salsa especial.",
+  },
+];
+
+export const DrinksMock: Product[] = [
+  {
+    id: 1,
+    img: bebida_1,
+    title: "Agua Cielo",
+    price: 3000,
+    description:
+      "Agua pura Cielo 500ml",
+  },
+  {
+    id: 2,
+    img: bebida_2,
+    title: "Colombiana",
+    price: 3000,
+    description:
+      "Gaseosa Colombiana 500ml",
+  },
+  {
+    id: 3,
+    img: bebida_3,
+    title: "Manzana",
+    price: 3000,
+    description:
+      "Gaseosa de Manzana 500ml",
+  },
+  {
+    id: 4,
+    img: bebida_4,
+    title: "Pepsi",
+    price: 4000,
+    description:
+      "Gaseosa Pepsi 500ml",
   },
 ];
