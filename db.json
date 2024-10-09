@@ -521,46 +521,6 @@
       "phoneNumber": "808-571-4827 x74310",
       "jobTitle": "Legacy Brand Assistant",
       "password": "$2a$10$DFmlccIcGvp2iDJsYFFLIOj1cgiy0NIo2wWrf8k433De6/RqyTveC"
-    },
-    {
-      "id": "deb260f5-f173-413f-b4b4-b250af466cda",
-      "avatar": "https://avatars.githubusercontent.com/u/70112741",
-      "email": "bscantor3@gmail.com",
-      "fullName": "Brayan Cantor",
-      "address": "Cra 93 sur No 82 a 48",
-      "phoneNumber": "32198490122",
-      "position": "Desarrollador",
-      "password": "$2a$10$CGh7IYkddfAOGvTqrpVjiurqrjRL7IeuIVkf6Ew4LzbV5TahFKzAS"
-    },
-    {
-      "id": "f7370a88-c241-437f-b778-9660d8082fb4",
-      "avatar": "https://avatars.githubusercontent.com/u/70112741",
-      "email": "test@test.com",
-      "fullName": "test",
-      "address": "test",
-      "phoneNumber": "12312",
-      "position": "test",
-      "password": "$2a$10$ZqYMLbiE7Iv93WjJNwmoj.jrPOnjsouz5.HFDh3NKEJiO4lA1vXfq"
-    },
-    {
-      "id": "5f4ea899-f5c6-4ebf-a4ca-094ffc4cff33",
-      "avatar": "https://avatars.githubusercontent.com/u/70112741",
-      "email": "testqw@gmail.com",
-      "fullName": "test",
-      "address": "test",
-      "phoneNumber": "test",
-      "position": "test",
-      "password": "$2a$10$XZTqSLtlm0JkX3jn.PuvMuESMmXtAK/Vi/.D3uYbqH.AxpQkdb8RS"
-    },
-    {
-      "id": "57419276-1ad0-4c02-bbc8-843c976d085f",
-      "avatar": "https://avatars.githubusercontent.com/u/70112741",
-      "email": "user2@gmail.com",
-      "fullName": "user",
-      "address": "user",
-      "phoneNumber": "user",
-      "jobTitle": "user",
-      "password": "$2a$10$VdfCa4wHuexiVBHK1S19X.TPD09Q4HsIQ/lIEUNAflT7Xm2.DY/f6"
     }
   ]
 }
