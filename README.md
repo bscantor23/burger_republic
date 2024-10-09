@@ -32,4 +32,4 @@ Para realizar la ejecución del proyecto, previamente debe tener instalado node 
 
 ![alt text](image-2.png)
 
-**Nota:** Actualmente está en proceso de revisión el responsive de la página, se recomienda utilizar una dimensión 1800 x 1169
+**Nota:** ¡Actualmente el prototipo ya es Responsivo!
