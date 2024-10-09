@@ -11,6 +11,7 @@ import { useState } from "react";
 import ResponsiveMenu from "./ResponsiveMenu";
 
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 interface HeaderProps {
   isLoggedIn: boolean;
@@ -19,6 +20,25 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ isLoggedIn, setIsLoggedIn }) => {
   const [open, setOpen] = useState(false);
+
+  const notAuthorized = () => {
+    toast.info("No tiene los permisos necesarios para realizar esta acción.", {
+      theme: "colored",
+      position: "top-right",
+    });
+  };
+
+  const handleOpen = () => {
+    setOpen(false);
+    if (isLoggedIn) {
+      setIsLoggedIn(false);
+      localStorage.removeItem("user");
+      toast.success("Sesión cerrada exitosamente.", {
+        theme: "colored",
+        position: "top-right",
+      });
+    }
+  };
 
   return (
     <>
@@ -54,10 +74,7 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, setIsLoggedIn }) => {
               <Link
                 to={isLoggedIn ? "/" : "/login"}
                 className="text-2xl hover:animate-pulse text-primary hover:text-orange-800 duration-200"
-                onClick={() => {
-                  setOpen(false);
-                  isLoggedIn ? setIsLoggedIn(false) : null;
-                }}
+                onClick={handleOpen}
               >
                 <span>
                   {isLoggedIn ? (
@@ -72,13 +89,13 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, setIsLoggedIn }) => {
               <Link
                 to={isLoggedIn ? "/" : "/login"}
                 className="hover:bg-primary min-w-[150px] text-center text-primary hidden md:block font-semibold hover:text-white rounded-xl border-2 border-primary py-2 duration-200"
-                onClick={() => (isLoggedIn ? setIsLoggedIn(isLoggedIn) : null)}
+                onClick={handleOpen}
               >
                 <span>{isLoggedIn ? "Cerrar sesión" : "Iniciar sesión"}</span>
               </Link>
               <button
                 className="text-2xl hover:animate-pulse text-primary hover:text-orange-800 duration-200"
-                onClick={() => setOpen(false)}
+                onClick={notAuthorized}
               >
                 <MdShoppingCart className="text-3xl" />
               </button>

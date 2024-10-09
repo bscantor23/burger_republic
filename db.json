@@ -1,0 +1,566 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "categoryId": 1,
+      "img": "hamburguesa_1.png",
+      "title": "Chicago",
+      "price": 28000,
+      "description": "Una hamburguesa tradicional con carne jugosa, queso, lechuga, tomate y una salsa especial."
+    },
+    {
+      "id": "2",
+      "categoryId": 1,
+      "img": "hamburguesa_2.png",
+      "title": "Bogotá",
+      "price": 32000,
+      "description": "Hamburguesa con carne a la parrilla, cebolla caramelizada, bacon crujiente y queso cheddar."
+    },
+    {
+      "id": "3",
+      "categoryId": 1,
+      "img": "hamburguesa_3.png",
+      "title": "Santiago",
+      "price": 26000,
+      "description": "Con carne de res, guacamole, queso de cabra y una mezcla de vegetales frescos."
+    },
+    {
+      "id": "4",
+      "categoryId": 1,
+      "img": "hamburguesa_4.png",
+      "title": "Lima",
+      "price": 30000,
+      "description": "Hamburguesa con carne de res, cebolla morada, tomate, lechuga y queso cheddar."
+    },
+    {
+      "id": "5",
+      "categoryId": 1,
+      "img": "hamburguesa_5.png",
+      "title": "Quito",
+      "price": 27000,
+      "description": "Hamburguesa con carne de res, champiñones, queso azul y una salsa especial."
+    },
+    {
+      "id": "6",
+      "categoryId": 1,
+      "img": "hamburguesa_6.png",
+      "title": "Caracas",
+      "price": 29000,
+      "description": "Hamburguesa con carne de res, queso cheddar, bacon crujiente y una salsa especial."
+    },
+    {
+      "id": "7",
+      "categoryId": 2,
+      "img": "bebida_1.jpg",
+      "title": "Agua Cielo",
+      "price": 3000,
+      "description": "Agua pura Cielo 500ml"
+    },
+    {
+      "id": "8",
+      "categoryId": 2,
+      "img": "bebida_2.jpg",
+      "title": "Colombiana",
+      "price": 3000,
+      "description": "Gaseosa Colombiana 500ml"
+    },
+    {
+      "id": "9",
+      "categoryId": 2,
+      "img": "bebida_3.jpg",
+      "title": "Manzana",
+      "price": 3000,
+      "description": "Gaseosa de Manzana 500ml"
+    },
+    {
+      "id": "10",
+      "categoryId": 2,
+      "img": "bebida_4.jpg",
+      "title": "Pepsi",
+      "price": 4000,
+      "description": "Gaseosa Pepsi 500ml"
+    }
+  ],
+  "users": [
+    {
+      "id": "51e430cd-3fac-46af-aa3d-54dd6f796c74",
+      "avatar": "https://avatars.githubusercontent.com/u/90611073",
+      "fullName": "Jason Waelchi",
+      "email": "Durward.Mayer43@gmail.com",
+      "address": "9000 Bailey Glen",
+      "phoneNumber": "(700) 516-8689",
+      "jobTitle": "Future Program Producer",
+      "password": "$2a$10$GoLHQf4FStSAozjiIRVVfOv5yFH/9i0mGRPhxcmD10dqhmrQAlvdW"
+    },
+    {
+      "id": "18439729-6454-4169-aa1a-94274233b362",
+      "avatar": "https://avatars.githubusercontent.com/u/5201218",
+      "fullName": "Leroy Cassin",
+      "email": "Geovany.Weimann95@gmail.com",
+      "address": "8743 Marvin Roads",
+      "phoneNumber": "(975) 564-3070 x38508",
+      "jobTitle": "Corporate Solutions Agent",
+      "password": "$2a$10$rQqkgEH5WPSQ/0bJmBINXumoauKbRLuiKMHC7sBCyVFrXF9UpUF5G"
+    },
+    {
+      "id": "47634c46-8dbc-4c48-93cf-ef00bed68036",
+      "avatar": "https://avatars.githubusercontent.com/u/62579138",
+      "fullName": "Rosemarie Hyatt",
+      "email": "Fredy_Hills90@gmail.com",
+      "address": "663 Bauch Path",
+      "phoneNumber": "(413) 294-0191 x621",
+      "jobTitle": "Product Usability Coordinator",
+      "password": "$2a$10$bWde2GVqvUDReZIkGYeHfuwM7hP82Jox4viEH1zs1ULqgUcLgn9BS"
+    },
+    {
+      "id": "2872df9b-7e94-4f14-bbdb-bb3bcbaa262c",
+      "avatar": "https://avatars.githubusercontent.com/u/35957905",
+      "fullName": "Ernest Crist",
+      "email": "Lorine_Kunde78@gmail.com",
+      "address": "5452 Hannah Mills",
+      "phoneNumber": "547.417.2118 x4616",
+      "jobTitle": "Dynamic Metrics Coordinator",
+      "password": "$2a$10$ZbFw7jdoHlvqF1YdqLpKmuKeTwEs7K7tflhQGZ34jjJp0K7TLnOUa"
+    },
+    {
+      "id": "fec03bac-ae9d-431c-a8ae-fc3eee78b369",
+      "avatar": "https://avatars.githubusercontent.com/u/82547578",
+      "fullName": "Virgil Lockman",
+      "email": "Daisy_Fritsch@yahoo.com",
+      "address": "1587 Kertzmann Junction",
+      "phoneNumber": "896-327-1396",
+      "jobTitle": "Legacy Functionality Executive",
+      "password": "$2a$10$Kr3fiAtMJEaRXIlXG1C2bOjln/PPITpLpp04SN7l5Z397cIepccGa"
+    },
+    {
+      "id": "234b9a44-e8c2-4ae1-a840-052263737d78",
+      "avatar": "https://avatars.githubusercontent.com/u/71617761",
+      "fullName": "Lionel Nienow",
+      "email": "Bertha_Von31@yahoo.com",
+      "address": "46014 Schimmel Cape",
+      "phoneNumber": "759.827.1946",
+      "jobTitle": "Human Factors Planner",
+      "password": "$2a$10$/a2Nf6Bc0RlvVpojBUYDAu3FqKdZ1.xs8LF2mv/.c/WNaHchZIT/."
+    },
+    {
+      "id": "38d1f03b-dd19-4fa4-9ca7-21e5f44a2395",
+      "avatar": "https://avatars.githubusercontent.com/u/56204348",
+      "fullName": "Annie Renner",
+      "email": "Juana_Casper7@yahoo.com",
+      "address": "9184 Henry Street",
+      "phoneNumber": "870.553.2060 x385",
+      "jobTitle": "Lead Directives Strategist",
+      "password": "$2a$10$RutxdLW4gwVMfpC/wHwLm.k6B753N9ULbw9WU428VuqiUuqOalUh2"
+    },
+    {
+      "id": "61596aaf-b03b-456c-ac6b-bb890b0e5117",
+      "avatar": "https://avatars.githubusercontent.com/u/77595580",
+      "fullName": "Viola O'Conner",
+      "email": "Dillan.Quitzon10@yahoo.com",
+      "address": "7394 Dark Lane",
+      "phoneNumber": "444.317.7486 x1329",
+      "jobTitle": "International Integration Assistant",
+      "password": "$2a$10$Vk.Im9MftGg8fmSVSpGeGOI9678vHo2KUb/0g5g/vIgMH5UzKuFoq"
+    },
+    {
+      "id": "7931b4df-4bcb-44ad-a9e3-30d950575202",
+      "avatar": "https://avatars.githubusercontent.com/u/57078835",
+      "fullName": "Clara Huels",
+      "email": "Vernice_Corwin43@hotmail.com",
+      "address": "6020 King Street",
+      "phoneNumber": "905.301.2219 x15136",
+      "jobTitle": "Corporate Division Engineer",
+      "password": "$2a$10$/vWCfk8xBgtMt1ArbGAsxOi0cRQhAppKQGBgEFYpzkvJITVzAgOu."
+    },
+    {
+      "id": "37a6b957-532c-491b-9a7a-70166845c03f",
+      "avatar": "https://avatars.githubusercontent.com/u/20115730",
+      "fullName": "Boyd Powlowski",
+      "email": "Lourdes.Keeling@gmail.com",
+      "address": "614 Darryl Lake",
+      "phoneNumber": "676-992-9188 x15869",
+      "jobTitle": "International Intranet Liaison",
+      "password": "$2a$10$A9JvN8tFhwwS4goPEeJf3uHzy2xl1Ob93SU7vdQTXB1I7NUIZztha"
+    },
+    {
+      "id": "5af9b50c-d22d-4660-8b04-efd5cd6e173b",
+      "avatar": "https://avatars.githubusercontent.com/u/86409244",
+      "fullName": "Eula Medhurst",
+      "email": "Kyla.Bosco11@hotmail.com",
+      "address": "50586 Willow Street",
+      "phoneNumber": "275-271-2484",
+      "jobTitle": "Future Program Engineer",
+      "password": "$2a$10$hngSkPi4yZXaFY9UMhfCjupJMWuobbAmrm9fK1mFb5YzVmMqiJb1m"
+    },
+    {
+      "id": "671d3940-c20a-40b1-832e-a899059ca777",
+      "avatar": "https://avatars.githubusercontent.com/u/57218419",
+      "fullName": "Whitney Bergstrom",
+      "email": "Ethel.Ernser77@gmail.com",
+      "address": "2674 Purdy Turnpike",
+      "phoneNumber": "857.273.4547 x0434",
+      "jobTitle": "Legacy Paradigm Engineer",
+      "password": "$2a$10$2fmNaDn3k0ptv3na8aZ9z.eig.szNrxwmS.bPdC4OgEtVLetdMV3C"
+    },
+    {
+      "id": "9da5ef41-f6de-448e-893e-6964f51b67fa",
+      "avatar": "https://avatars.githubusercontent.com/u/36934544",
+      "fullName": "Dora Blanda",
+      "email": "Lorenza59@gmail.com",
+      "address": "27706 Stracke Walk",
+      "phoneNumber": "(642) 546-7860",
+      "jobTitle": "Principal Web Developer",
+      "password": "$2a$10$4sZG/D8nBhe2tHRI4zproeOPMTW/Kw1H.No9vev1GJQMXSV4gMsx2"
+    },
+    {
+      "id": "6f7f698a-a90d-4508-be63-abf4979f2716",
+      "avatar": "https://avatars.githubusercontent.com/u/41338349",
+      "fullName": "Cindy Doyle",
+      "email": "Maudie8@yahoo.com",
+      "address": "96751 Windermere Road",
+      "phoneNumber": "249.909.8747",
+      "jobTitle": "International Configuration Associate",
+      "password": "$2a$10$LsMkHAOzfafK2HPlCKPviOVdd9WqkFG/mf252ZiV4ie727F788HVK"
+    },
+    {
+      "id": "d86b342e-db65-43a8-8ef7-287518a941eb",
+      "avatar": "https://avatars.githubusercontent.com/u/29173609",
+      "fullName": "Dr. Alfredo Turcotte",
+      "email": "Madaline98@yahoo.com",
+      "address": "698 Jacynthe Circles",
+      "phoneNumber": "694.713.7281 x154",
+      "jobTitle": "Direct Research Agent",
+      "password": "$2a$10$LU7zFJe/yeHJ6TuyKDVTUeDJ.RSUwmnlXH1B4qTaSscvisv5vpidS"
+    },
+    {
+      "id": "5baf8242-a4df-4ab8-a069-abe873f74fad",
+      "avatar": "https://avatars.githubusercontent.com/u/2108498",
+      "fullName": "Bernice O'Hara",
+      "email": "Ora.Stehr@gmail.com",
+      "address": "95915 Claudine Via",
+      "phoneNumber": "497.478.5669 x82168",
+      "jobTitle": "Human Program Liaison",
+      "password": "$2a$10$Ft8TD5U1KQQqWq5CYkxzw.kkcrV5dP681Er9rZf7AobZQhU6UWnae"
+    },
+    {
+      "id": "4f9f3dfa-fc04-4db6-a38e-12639de3c62b",
+      "avatar": "https://avatars.githubusercontent.com/u/26866362",
+      "fullName": "Irving Braun",
+      "email": "Bridgette_Bartell@hotmail.com",
+      "address": "27786 Rafaela Forge",
+      "phoneNumber": "498-238-8157 x1187",
+      "jobTitle": "Human Accounts Engineer",
+      "password": "$2a$10$QR6g5r03PORNLsCfBNSiceOPECWj.2PQmd9UHO6XLJfb9RalVP882"
+    },
+    {
+      "id": "2e45a9b9-4f7a-4b95-9c8c-2e3847d1a1eb",
+      "avatar": "https://avatars.githubusercontent.com/u/10915897",
+      "fullName": "Ms. Toni Pacocha",
+      "email": "Ferne.Murazik@yahoo.com",
+      "address": "939 S 8th Street",
+      "phoneNumber": "342-404-1179 x417",
+      "jobTitle": "Direct Security Planner",
+      "password": "$2a$10$Qbs9TthhUQn5BP06u0jvAuZ71uV9Hx7WurukJLmtSNHMgakfxXx.."
+    },
+    {
+      "id": "17d9b8d0-9bd0-4c86-b5b5-4e36e2c938dc",
+      "avatar": "https://avatars.githubusercontent.com/u/59231280",
+      "fullName": "Catherine Feest",
+      "email": "Magdalen_Volkman@gmail.com",
+      "address": "5610 Kub Club",
+      "phoneNumber": "642.653.1805 x95408",
+      "jobTitle": "Legacy Optimization Specialist",
+      "password": "$2a$10$9OKwFCj2/5dW0P7pYMzEDezpeynX0Nn3LljmeoA3aGBWqGZCdli7O"
+    },
+    {
+      "id": "710f188b-4681-4e5a-a69b-60470b2b216f",
+      "avatar": "https://avatars.githubusercontent.com/u/2975455",
+      "fullName": "Teresa Kiehn",
+      "email": "Hilton54@gmail.com",
+      "address": "5702 N Maple Street",
+      "phoneNumber": "391-792-3928 x267",
+      "jobTitle": "Internal Program Analyst",
+      "password": "$2a$10$NNcdqU9ScwTe1PIcluSvWO/7l9iJBferUBAzhj5mlb0nE7Pb9xwLy"
+    },
+    {
+      "id": "ee0aa962-1d30-4f8e-9caf-4743f223fecc",
+      "avatar": "https://avatars.githubusercontent.com/u/38267337",
+      "fullName": "Dr. Adrian McLaughlin",
+      "email": "Jerrod.Turner63@yahoo.com",
+      "address": "49332 Vine Street",
+      "phoneNumber": "(504) 600-5281 x196",
+      "jobTitle": "Internal Integration Technician",
+      "password": "$2a$10$422zivSk7PrZXbJ.uf51aOP8pIBc5Kg65TlnT43cR1WabpwKmmmNG"
+    },
+    {
+      "id": "33d7329b-5f3e-4632-8758-9fe690bcbc73",
+      "avatar": "https://avatars.githubusercontent.com/u/92283965",
+      "fullName": "Sean Schaden PhD",
+      "email": "Kris14@yahoo.com",
+      "address": "4480 Schmidt Overpass",
+      "phoneNumber": "(776) 835-2538 x42737",
+      "jobTitle": "Lead Optimization Developer",
+      "password": "$2a$10$QMtcwkPZUKFBR4yvR8kfiO/QMiZgvpI98d6n1zBkUypgQmAtf.VaK"
+    },
+    {
+      "id": "b208da3f-6b01-46e6-aed2-2b533381ea0a",
+      "avatar": "https://avatars.githubusercontent.com/u/93960641",
+      "fullName": "Mathew Hane",
+      "email": "Sophia_Hartmann@gmail.com",
+      "address": "98874 Stamm Forest",
+      "phoneNumber": "(268) 637-2666 x65201",
+      "jobTitle": "Dynamic Response Agent",
+      "password": "$2a$10$wSHNlFQo0uqLoIHbDtFFpe4mtNRtPnzVWZcRjJjcdu79JAGwgDs9a"
+    },
+    {
+      "id": "a9113577-5c95-4149-96f1-103f274d8d3d",
+      "avatar": "https://avatars.githubusercontent.com/u/53089469",
+      "fullName": "Dr. Mathew Okuneva-Russel",
+      "email": "Carole.Corkery@hotmail.com",
+      "address": "9731 Frida Way",
+      "phoneNumber": "(710) 784-7238",
+      "jobTitle": "Central Functionality Orchestrator",
+      "password": "$2a$10$cvl024nRuNSvQGKj/HBCPOicCqyb2pQMENW07beBQ6BAP.7Keft7K"
+    },
+    {
+      "id": "f8e4edc5-cd51-4d36-a891-a78a7433c5fe",
+      "avatar": "https://avatars.githubusercontent.com/u/68169561",
+      "fullName": "Ana Lindgren",
+      "email": "Bennie.Macejkovic28@yahoo.com",
+      "address": "13429 Wolff Pass",
+      "phoneNumber": "(477) 635-1321 x31412",
+      "jobTitle": "Future Implementation Executive",
+      "password": "$2a$10$0Hu0UkOwpc1hLBZ54uv7rOkLcTBJnJsGHVfNKmvcavmkyW9zsxQAO"
+    },
+    {
+      "id": "a8fca52a-7587-4acf-bfd7-840ff9fe0069",
+      "avatar": "https://avatars.githubusercontent.com/u/20909834",
+      "fullName": "Christy Volkman",
+      "email": "Dewitt61@hotmail.com",
+      "address": "84216 Garfield Brook",
+      "phoneNumber": "370.590.4482 x676",
+      "jobTitle": "Regional Data Representative",
+      "password": "$2a$10$ZApCj1LpeIOQGDfv2YDDPufKYOqB8uhOh0rwCmBCavHFCvsp2vEQC"
+    },
+    {
+      "id": "7b64a77c-04dd-4a35-a33b-98076cbbd2a0",
+      "avatar": "https://avatars.githubusercontent.com/u/94300901",
+      "fullName": "Miriam Crist",
+      "email": "Keyon_Langosh@gmail.com",
+      "address": "50839 Emily Stream",
+      "phoneNumber": "711-916-5398",
+      "jobTitle": "Global Directives Facilitator",
+      "password": "$2a$10$aBpHMe4m3547T3lFmgfu8e9VSp7ZJ.LquHHTBPYbOm4QG7NvnjfYi"
+    },
+    {
+      "id": "a502ec3c-0ba9-405c-b923-992e590209c8",
+      "avatar": "https://avatars.githubusercontent.com/u/87692839",
+      "fullName": "Mr. Dexter Senger",
+      "email": "Jeff98@gmail.com",
+      "address": "4798 D'Amore Heights",
+      "phoneNumber": "(410) 266-5877 x089",
+      "jobTitle": "Chief Tactics Engineer",
+      "password": "$2a$10$LI62s4tCjy/uQ.f2kQLgG.gVaWvkRboYyLmhV5eCBVam2uX31KF/C"
+    },
+    {
+      "id": "0ee6226d-9d51-42f9-984e-16295471aa02",
+      "avatar": "https://avatars.githubusercontent.com/u/29716957",
+      "fullName": "Bryant Pfeffer",
+      "email": "Ruthie_Connelly@hotmail.com",
+      "address": "45453 Franklin Road",
+      "phoneNumber": "926.898.4943",
+      "jobTitle": "Product Factors Architect",
+      "password": "$2a$10$16TXnnWZgTNJXyEZHIH6F./TQo6mw3d3sAWH04lUUraG.HeRLkhl6"
+    },
+    {
+      "id": "286c3027-0358-4c52-b209-2dfab09857bc",
+      "avatar": "https://avatars.githubusercontent.com/u/2958287",
+      "fullName": "Henry Witting",
+      "email": "Mara9@yahoo.com",
+      "address": "954 Garnet Crossroad",
+      "phoneNumber": "(279) 353-2411",
+      "jobTitle": "Principal Security Director",
+      "password": "$2a$10$j2YbTqV7Ig0eHTZOEbBwkedbhMl2uDAm8q6M0T7FrU2KIlZapDq1q"
+    },
+    {
+      "id": "e8f33b2e-2fb6-4822-bd20-8216f5c4ede5",
+      "avatar": "https://avatars.githubusercontent.com/u/73944917",
+      "fullName": "Olive Cremin",
+      "email": "Katlyn_Fisher@hotmail.com",
+      "address": "5480 Hilpert Forks",
+      "phoneNumber": "293.781.5519 x168",
+      "jobTitle": "Lead Mobility Producer",
+      "password": "$2a$10$qM04hBankwkEWBpZlyonWu380zkTMQBZRvkhDnNwaSs3cmB.U21jG"
+    },
+    {
+      "id": "7efc7c4f-2bec-46ab-b3f5-6417b73d2778",
+      "avatar": "https://avatars.githubusercontent.com/u/67198897",
+      "fullName": "Kristina Swaniawski",
+      "email": "Teresa.Bogan@gmail.com",
+      "address": "84284 Gleichner Springs",
+      "phoneNumber": "(438) 948-5179 x67049",
+      "jobTitle": "Senior Brand Director",
+      "password": "$2a$10$5aWlFx1pfWSAWNe2b7QE/.mW79irwdC1C4fKBPO232eZN/KU8...K"
+    },
+    {
+      "id": "ffdff959-ea79-4135-a450-66f030c3d62c",
+      "avatar": "https://avatars.githubusercontent.com/u/68444655",
+      "fullName": "Geoffrey Rempel",
+      "email": "Ole.Boyer79@hotmail.com",
+      "address": "4827 Sigmund Square",
+      "phoneNumber": "(945) 999-0687 x86792",
+      "jobTitle": "Corporate Configuration Associate",
+      "password": "$2a$10$/kE7X4Cqwmc1zEmmlIkfUeTTzCRP66QwgyIq3k9vcgJ9OybcDUAIy"
+    },
+    {
+      "id": "907ba134-19a7-4b3c-8ec2-c4dfce2c6607",
+      "avatar": "https://avatars.githubusercontent.com/u/94867358",
+      "fullName": "Joseph Wiza",
+      "email": "Jarrett.Hirthe37@yahoo.com",
+      "address": "655 Ashton Row",
+      "phoneNumber": "1-362-999-0488 x10708",
+      "jobTitle": "Regional Directives Technician",
+      "password": "$2a$10$XKXjx.Ak.duQkmi.klDOqO7OZrp4B1./URXpbpB.zHiPMyn8sv5I6"
+    },
+    {
+      "id": "54ed0952-e4f0-44ee-ac74-035ae8c9354a",
+      "avatar": "https://avatars.githubusercontent.com/u/52606379",
+      "fullName": "Dolores Watsica",
+      "email": "Leland_Sawayn-Blanda@yahoo.com",
+      "address": "141 Junius Meadows",
+      "phoneNumber": "(403) 656-6952 x0465",
+      "jobTitle": "International Configuration Engineer",
+      "password": "$2a$10$vXJ/tNmvp/3bEHkNaG1QMuO5xCzFvBqM5PpXO7BockFBRwYe58Ooa"
+    },
+    {
+      "id": "318e8c62-628c-493b-a9e6-ff8c44957235",
+      "avatar": "https://avatars.githubusercontent.com/u/51971986",
+      "fullName": "Matthew O'Kon",
+      "email": "Winston_Simonis51@yahoo.com",
+      "address": "557 Dickens Ways",
+      "phoneNumber": "792.666.2338 x68171",
+      "jobTitle": "Customer Factors Consultant",
+      "password": "$2a$10$kkVuRW2hZCBr.55NcmCoO.VfHPUpggrYwXyFyJeKCbZy2VelnWSu."
+    },
+    {
+      "id": "74be40c6-65b4-427f-ba10-d3c3552067b0",
+      "avatar": "https://avatars.githubusercontent.com/u/28495620",
+      "fullName": "Janie Fadel-McClure",
+      "email": "Brigitte.Balistreri@gmail.com",
+      "address": "8826 Conn Route",
+      "phoneNumber": "433.876.9282 x85325",
+      "jobTitle": "Customer Usability Technician",
+      "password": "$2a$10$KXVqkjY7.4wwzIRGzPv5v.ups2ZJKzGQ3yNeB6cyGMl3yPNIgxXdS"
+    },
+    {
+      "id": "c5c4d5de-3568-4dd7-9d4d-e7e1ec0b07c4",
+      "avatar": "https://avatars.githubusercontent.com/u/3449339",
+      "fullName": "Marie Smith",
+      "email": "Rosina_Kunde37@gmail.com",
+      "address": "376 Somerset Road",
+      "phoneNumber": "601-915-2739 x795",
+      "jobTitle": "Product Infrastructure Coordinator",
+      "password": "$2a$10$UPqH8MsMHrwL2sAtVfajZ.bj/z6SQHRpqZb2o2Ma0CQAt6fIVWpou"
+    },
+    {
+      "id": "bbb4307e-2d72-4af0-98a8-0d8144005d62",
+      "avatar": "https://avatars.githubusercontent.com/u/44008106",
+      "fullName": "Ora Heathcote",
+      "email": "Sienna30@hotmail.com",
+      "address": "41316 Tremblay Fall",
+      "phoneNumber": "(674) 628-1226 x0942",
+      "jobTitle": "Human Applications Associate",
+      "password": "$2a$10$482FlLjmik8tlamdlNyv3eahv5C3qbVXePpTcS0dOUlIk69unCIBq"
+    },
+    {
+      "id": "cb6653cd-68b4-43fd-b969-9a84b8c75057",
+      "avatar": "https://avatars.githubusercontent.com/u/62112310",
+      "fullName": "Terri Pfeffer",
+      "email": "Trent94@hotmail.com",
+      "address": "905 Joelle Valleys",
+      "phoneNumber": "1-803-831-7908 x79955",
+      "jobTitle": "Lead Interactions Strategist",
+      "password": "$2a$10$Sjf31MA376TOA6PJsCaCtuOY9cjUfXb1cnp2EbWcFF6M0WJe7gb9G"
+    },
+    {
+      "id": "47207fba-4e0c-4cd3-9785-7592d52fb260",
+      "avatar": "https://avatars.githubusercontent.com/u/32716492",
+      "fullName": "Dr. Antonia Muller",
+      "email": "Mariah45@gmail.com",
+      "address": "15312 Kendrick Views",
+      "phoneNumber": "960-424-5932",
+      "jobTitle": "International Mobility Coordinator",
+      "password": "$2a$10$uk0KojXEUGOs3aun3vOle.HMVMYGQUr.kUr0hOcO5dLH0X4doNCGq"
+    },
+    {
+      "id": "f3130158-a8d2-434d-b843-31b318bcd9c0",
+      "avatar": "https://avatars.githubusercontent.com/u/36445891",
+      "fullName": "Jim Block",
+      "email": "Dianna.Hoppe@hotmail.com",
+      "address": "6018 Main Road",
+      "phoneNumber": "864-320-2533 x6113",
+      "jobTitle": "Customer Accounts Consultant",
+      "password": "$2a$10$Yv3sgVnJ4CaEX.54vYW04.ZNZTtIKqTfdQ4ZYod77KLmxKf2zKRUC"
+    },
+    {
+      "id": "f216b026-743c-4973-b76d-a6202161f5b0",
+      "avatar": "https://avatars.githubusercontent.com/u/45192092",
+      "fullName": "Orlando Bailey",
+      "email": "Alivia_Paucek@yahoo.com",
+      "address": "320 The Croft",
+      "phoneNumber": "808-571-4827 x74310",
+      "jobTitle": "Legacy Brand Assistant",
+      "password": "$2a$10$v7uoNrDl.dNQAjEsrrCp0uLThjIfmpt5Dw4H5XDCPopd6sabarTFi"
+    },
+    {
+      "id": "f216b026-743c-4973-b76d-a6202161f5b0",
+      "avatar": "https://avatars.githubusercontent.com/u/45192092",
+      "fullName": "Brayan Cantor",
+      "email": "user@gmail.com",
+      "address": "320 The Croft",
+      "phoneNumber": "808-571-4827 x74310",
+      "jobTitle": "Legacy Brand Assistant",
+      "password": "$2a$10$DFmlccIcGvp2iDJsYFFLIOj1cgiy0NIo2wWrf8k433De6/RqyTveC"
+    },
+    {
+      "id": "deb260f5-f173-413f-b4b4-b250af466cda",
+      "avatar": "https://avatars.githubusercontent.com/u/70112741",
+      "email": "bscantor3@gmail.com",
+      "fullName": "Brayan Cantor",
+      "address": "Cra 93 sur No 82 a 48",
+      "phoneNumber": "32198490122",
+      "position": "Desarrollador",
+      "password": "$2a$10$CGh7IYkddfAOGvTqrpVjiurqrjRL7IeuIVkf6Ew4LzbV5TahFKzAS"
+    },
+    {
+      "id": "f7370a88-c241-437f-b778-9660d8082fb4",
+      "avatar": "https://avatars.githubusercontent.com/u/70112741",
+      "email": "test@test.com",
+      "fullName": "test",
+      "address": "test",
+      "phoneNumber": "12312",
+      "position": "test",
+      "password": "$2a$10$ZqYMLbiE7Iv93WjJNwmoj.jrPOnjsouz5.HFDh3NKEJiO4lA1vXfq"
+    },
+    {
+      "id": "5f4ea899-f5c6-4ebf-a4ca-094ffc4cff33",
+      "avatar": "https://avatars.githubusercontent.com/u/70112741",
+      "email": "testqw@gmail.com",
+      "fullName": "test",
+      "address": "test",
+      "phoneNumber": "test",
+      "position": "test",
+      "password": "$2a$10$XZTqSLtlm0JkX3jn.PuvMuESMmXtAK/Vi/.D3uYbqH.AxpQkdb8RS"
+    },
+    {
+      "id": "57419276-1ad0-4c02-bbc8-843c976d085f",
+      "avatar": "https://avatars.githubusercontent.com/u/70112741",
+      "email": "user2@gmail.com",
+      "fullName": "user",
+      "address": "user",
+      "phoneNumber": "user",
+      "jobTitle": "user",
+      "password": "$2a$10$VdfCa4wHuexiVBHK1S19X.TPD09Q4HsIQ/lIEUNAflT7Xm2.DY/f6"
+    }
+  ]
+}

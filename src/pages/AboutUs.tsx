@@ -1,7 +1,7 @@
-import coronaImage from "../assets/corona.svg";
-import hamburguesa_1 from "../assets/hamburguesa_1.png";
-import hamburguesa_2 from "../assets/hamburguesa_2.png";
-import hamburguesa_3 from "../assets/hamburguesa_5.png";
+import coronaImage from "/corona.svg";
+import hamburguesa_1 from "/assets/hamburguesa_1.png";
+import hamburguesa_2 from "/assets/hamburguesa_2.png";
+import hamburguesa_3 from "/assets/hamburguesa_5.png";
 
 const AboutUs = () => {
   return (

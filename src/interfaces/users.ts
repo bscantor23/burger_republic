@@ -1,4 +1,5 @@
 import { faker } from "@faker-js/faker";
+import bcrypt from "bcryptjs";
 
 export interface User {
   id?: string;
@@ -8,23 +9,27 @@ export interface User {
   address: string;
   phoneNumber: string;
   jobTitle: string;
-  supervisor: string;
+  password: string;
 }
 
 const generateUser = (): User => {
   return {
+    id: faker.string.uuid(),
     avatar: faker.image.avatar(),
     fullName: faker.person.fullName(),
     email: faker.internet.email(),
     address: faker.location.streetAddress(),
     phoneNumber: faker.phone.number(),
-    jobTitle: faker.person.jobDescriptor(),
-    supervisor: faker.person.fullName(),
+    jobTitle: faker.person.jobTitle(),
+    password: bcrypt.hashSync(faker.internet.password(), 10),
   };
 };
 
-const UsersMock: User[] = faker.helpers.multiple(generateUser, {
-  count: 50,
-});
+const addUsersData = (number: number): User[] => {
+  const users: User[] = faker.helpers.multiple(generateUser, {
+    count: number,
+  });
+  return users;
+};
 
-export default UsersMock;
+export default addUsersData;

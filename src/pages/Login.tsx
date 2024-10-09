@@ -1,12 +1,43 @@
-import { Link } from "react-router-dom";
-import loginImage from "../assets/login.svg";
+import loginImage from "/assets/login.svg";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { validateFormController } from "../contollers/login";
+import Modal from "../components/Modal";
 
 interface LoginProps {
-  isLoggedIn: boolean;
   setIsLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Login: React.FC<LoginProps> = (props: LoginProps) => {
+const Login: React.FC<LoginProps> = ({ setIsLoggedIn }: LoginProps) => {
+  const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
+
+  const validateForm = async (event: React.FormEvent<HTMLFormElement>) => {
+    try {
+      event.preventDefault();
+      const user = await validateFormController(
+        new FormData(event.currentTarget)
+      );
+      if (user) {
+        localStorage.setItem("user", JSON.stringify(user));
+        toast.success("Sesión iniciada exitosamente.", {
+          theme: "colored",
+          position: "top-right",
+        });
+        setIsLoggedIn(true);
+        navigate("/");
+      } else {
+        toast.error("No se encuentra un usuario registrado.", {
+          theme: "colored",
+          position: "top-right",
+        });
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
   return (
     <div className="container-fluid lg:columns-2 flex flex-col lg:flex-row justify-between items-center md:min-h-[1050px] md:h-screen">
       <div className="container mt-40 lg:mt-0 flex flex-col text-center">
@@ -15,7 +46,10 @@ const Login: React.FC<LoginProps> = (props: LoginProps) => {
           ¡Bienvenido de nuevo! Por favor ingrese sus datos
         </h2>
         <div className="container-fluid flex flex-row justify-center p-5">
-          <form className="space-y-3 max-w-[500px] w-full">
+          <form
+            className="space-y-3 max-w-[500px] w-full"
+            onSubmit={validateForm}
+          >
             <div>
               <label
                 htmlFor="email"
@@ -50,23 +84,25 @@ const Login: React.FC<LoginProps> = (props: LoginProps) => {
               <hr className="border-primary border-2 w-[100px] my-2 p-0" />
             </div>
             <div className="pt-5">
-              <Link
-                to="/"
-                onClick={() => props.setIsLoggedIn(true)}
+              <button
+                type="submit"
+                onClick={() => setIsLoggedIn(true)}
                 className="block w-full justify-center py-2 px-20 border border-transparent shadow-sm text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
               >
                 Iniciar sesión
-              </Link>
+              </button>
             </div>
             <div className="pt-5">
               <button
-                type="submit"
+                type="button"
                 className="block w-full justify-center py-2 px-20 border-2 border-primary shadow-sm text-lg font-medium rounded-xl text-primary bg-white hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                onClick={() => setShowModal(true)}
               >
                 Registrarse
               </button>
             </div>
           </form>
+          {showModal && <Modal setShowModal={setShowModal} action={"create"} />}
         </div>
       </div>
 

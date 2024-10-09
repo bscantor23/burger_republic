@@ -1,6 +1,6 @@
-import principalImage from "../assets/principal.svg";
-import coronaImage from "../assets/corona.svg";
-import lechugaImage from "../assets/lechuga.svg";
+import principalImage from "/assets/principal.svg";
+import coronaImage from "/corona.svg";
+import lechugaImage from "/assets/lechuga.svg";
 
 const Home = () => {
   return (

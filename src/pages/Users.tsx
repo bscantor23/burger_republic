@@ -8,11 +8,52 @@ import {
 } from "@tanstack/react-table";
 
 import { FaEye, FaEdit, FaTrash, FaSearch } from "react-icons/fa";
-import UsersMock, { User } from "../mockData/users";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Search from "../components/Search";
+import { User } from "../interfaces/users";
+import { API_BASE_URL } from "../constants";
+import Modal from "../components/Modal";
+import { deleteController } from "../contollers/user";
+import { toast } from "react-toastify";
 
 const Users = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [globalFilter, setGlobalFilter] = useState("");
+  const [users, setUsers] = useState([]);
+  const [selectedUser, setSelectedUser] = useState<User | undefined>();
+  const [action, setAction] = useState<"view" | "update" | "create">("create");
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch(`${API_BASE_URL}/users`);
+      const data = await response.json();
+      setUsers(data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const deleteUser = async (id: string) => {
+    try {
+      await deleteController(id);
+      await fetchData();
+      toast.success("Usuario eliminado exitosamente.", {
+        theme: "colored",
+        position: "top-right",
+      });
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      toast.error("Error al intentar eliminar el usuario.", {
+        theme: "colored",
+        position: "top-right",
+      });
+    }
+  };
+
   const columnHelper = createColumnHelper<User>();
 
   const columns = [
@@ -42,19 +83,13 @@ const Users = () => {
     columnHelper.accessor("phoneNumber", {
       header: "Teléfono",
     }),
-    columnHelper.accessor("supervisor", {
-      header: "Supervisor",
-    }),
     columnHelper.accessor("jobTitle", {
       header: "Cargo",
     }),
   ];
 
-  const [data] = useState(() => [...UsersMock]);
-  const [globalFilter, setGlobalFilter] = useState("");
-
   const table = useReactTable({
-    data,
+    data: users,
     columns,
     state: {
       globalFilter,
@@ -83,7 +118,14 @@ const Users = () => {
             placeholder="Búsqueda"
           />
         </div>
-        <button className="w-[300px] self-center hover:bg-green-500 text-green-500  md:block font-semibold hover:text-white rounded-xl border-2 border-green-500 px-6 py-2 duration-200">
+        <button
+          className="w-[300px] self-center hover:bg-green-500 text-green-500  md:block font-semibold hover:text-white rounded-xl border-2 border-green-500 px-6 py-2 duration-200"
+          onClick={() => {
+            setSelectedUser(undefined);
+            setShowModal(true);
+            setAction("create");
+          }}
+        >
           Crear Usuario
         </button>
       </div>
@@ -129,13 +171,30 @@ const Users = () => {
                       ))}
                       <td className="px-3.5 py-2">
                         <div className="flex space-x-4 text-2xl justify-center items-center h-full">
-                          <button className="text-blue-500">
+                          <button
+                            className="text-blue-500"
+                            onClick={() => {
+                              setSelectedUser(row.original);
+                              setShowModal(true);
+                              setAction("view");
+                            }}
+                          >
                             <FaEye />
                           </button>
-                          <button className="text-yellow-500">
+                          <button
+                            className="text-yellow-500"
+                            onClick={() => {
+                              setSelectedUser(row.original);
+                              setShowModal(true);
+                              setAction("update");
+                            }}
+                          >
                             <FaEdit />
                           </button>
-                          <button className="text-red-500">
+                          <button
+                            onClick={() => deleteUser(row.getValue("id"))}
+                            className="text-red-500"
+                          >
                             <FaTrash />
                           </button>
                         </div>
@@ -200,6 +259,14 @@ const Users = () => {
           </select>
         </div>
       </div>
+      {showModal && (
+        <Modal
+          setShowModal={setShowModal}
+          selectedUser={selectedUser}
+          action={action}
+          updateFetch={fetchData}
+        />
+      )}
     </div>
   );
 };

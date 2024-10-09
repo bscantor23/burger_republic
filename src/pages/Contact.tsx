@@ -1,6 +1,15 @@
-import coronaImage from "../assets/corona.svg";
+import { toast } from "react-toastify";
+import coronaImage from "/corona.svg";
 
 const Contact = () => {
+  const validateForm = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    toast.success("El correo ha sido enviado correctamente.", {
+      theme: "colored",
+      position: "top-right",
+    });
+  };
+
   return (
     <div className="container-fluid flex flex-col text-center md:min-h-[1150px] mt-24">
       <div>
@@ -21,11 +30,11 @@ const Contact = () => {
           />
         </div>
         <div className="container-fluid w-full">
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={validateForm}>
             <div>
               <label
                 htmlFor="email"
-                className="block text-left text-xl font-medium text-gray-700"
+                className="block text-left text-lg font-medium text-gray-700"
               >
                 Correo <span className="text-primary font-bold">*</span>
               </label>

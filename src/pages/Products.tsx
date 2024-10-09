@@ -8,11 +8,37 @@ import {
 } from "@tanstack/react-table";
 
 import { FaEye, FaEdit, FaTrash, FaSearch } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Search from "../components/Search";
-import { Product, ProductsMock } from "../mockData/product-mock";
+import { Product } from "../interfaces/product";
+import { API_BASE_URL } from "../constants";
+import { toast } from "react-toastify";
 
 const Products = () => {
+  const [globalFilter, setGlobalFilter] = useState("");
+  const [products, setProducts] = useState([]);
+
+  const notAuthorized = () => {
+    toast.info("No tiene los permisos necesarios para realizar esta acción.", {
+      theme: "colored",
+      position: "top-right",
+    });
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${API_BASE_URL}/products`);
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   const columnHelper = createColumnHelper<Product>();
 
   const columns = [
@@ -23,7 +49,7 @@ const Products = () => {
     columnHelper.accessor("img", {
       cell: (info) => (
         <img
-          src={info?.getValue()}
+          src={`/assets/${info?.getValue()}`}
           alt="..."
           className="rounded-full w-100 h-10 object-cover"
         ></img>
@@ -32,6 +58,12 @@ const Products = () => {
     }),
     columnHelper.accessor("title", {
       header: "Título",
+    }),
+    columnHelper.accessor("categoryId", {
+      header: "Categoría",
+      cell: (info) => (
+        <span>{info?.getValue() === 1 ? "Hamburguesa" : "Bebida"}</span>
+      ),
     }),
     columnHelper.accessor("price", {
       cell: (info) => (
@@ -51,11 +83,8 @@ const Products = () => {
     }),
   ];
 
-  const [data] = useState(() => [...ProductsMock]);
-  const [globalFilter, setGlobalFilter] = useState("");
-
   const table = useReactTable({
-    data,
+    data: products,
     columns,
     state: {
       globalFilter,
@@ -66,7 +95,7 @@ const Products = () => {
   });
 
   return (
-    <div className="mt-[125px] p-2 container-fluid px-10 md:px-20">
+    <div className="mt-28 p-2 md:min-h-[1300px] lg:min-h-[1200px] container-fluid px-10 md:px-20">
       <div className="pb-10">
         <h1 className="text-primary text-3xl py-5">Productos</h1>
         <hr />
@@ -83,7 +112,10 @@ const Products = () => {
             placeholder="Búsqueda"
           />
         </div>
-        <button className="w-[300px] self-center hover:bg-green-500 text-green-500  md:block font-semibold hover:text-white rounded-xl border-2 border-green-500 px-6 py-2 duration-200">
+        <button
+          onClick={notAuthorized}
+          className="w-[300px] self-center hover:bg-green-500 text-green-500  md:block font-semibold hover:text-white rounded-xl border-2 border-green-500 px-6 py-2 duration-200"
+        >
           Crear Producto
         </button>
       </div>
@@ -127,13 +159,22 @@ const Products = () => {
                       ))}
                       <td className="px-3.5 py-2">
                         <div className="flex space-x-4 text-2xl justify-center items-center h-full">
-                          <button className="text-blue-500">
+                          <button
+                            onClick={notAuthorized}
+                            className="text-blue-500"
+                          >
                             <FaEye />
                           </button>
-                          <button className="text-yellow-500">
+                          <button
+                            onClick={notAuthorized}
+                            className="text-yellow-500"
+                          >
                             <FaEdit />
                           </button>
-                          <button className="text-red-500">
+                          <button
+                            onClick={notAuthorized}
+                            className="text-red-500"
+                          >
                             <FaTrash />
                           </button>
                         </div>

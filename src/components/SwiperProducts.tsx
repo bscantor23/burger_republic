@@ -12,7 +12,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Product } from "../mockData/product-mock";
+import { Product } from "../interfaces/product";
+import { toast } from "react-toastify";
 
 type SwiperProductsProps = {
   title: string;
@@ -25,6 +26,13 @@ const SwiperProducts: React.FC<SwiperProductsProps> = ({
   dataMock,
   time,
 }) => {
+  const notAuthorized = () => {
+    toast.info("No tiene los permisos necesarios para realizar esta acción.", {
+      theme: "colored",
+      position: "top-right",
+    });
+  };
+
   return (
     <>
       <div className="container flex flex-row justify-center py-5">
@@ -60,7 +68,7 @@ const SwiperProducts: React.FC<SwiperProductsProps> = ({
               <article className="container-fluid flex-col justify-center text-center align-middle pb-14">
                 <div className="container-fluid flex flex-row justify-center py-2">
                   <img
-                    src={item.img}
+                    src={`/assets/${item.img}`}
                     alt="image"
                     className="card__img object-fit max-h-[200px]"
                   />
@@ -86,7 +94,10 @@ const SwiperProducts: React.FC<SwiperProductsProps> = ({
                   </p>
                 </div>
                 <div className="container flex flex-row justify-center">
-                  <button className="hover:bg-primary text-primary font-semibold hover:text-white rounded-xl border-2 border-primary px-6 py-2 duration-200">
+                  <button
+                    onClick={notAuthorized}
+                    className="hover:bg-primary text-primary font-semibold hover:text-white rounded-xl border-2 border-primary px-6 py-2 duration-200"
+                  >
                     Ordenar
                   </button>
                 </div>

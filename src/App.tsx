@@ -7,11 +7,20 @@ import Contact from "./pages/Contact";
 import Menu from "./pages/Menu";
 import Login from "./pages/Login";
 import Users from "./pages/Users";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Products from "./pages/Products";
+
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.getItem("user")) {
+      setIsLoggedIn(true);
+    }
+  }, []);
 
   return (
     <div id="principal-container" className="overflow-x-hidden relative">
@@ -23,14 +32,12 @@ function App() {
         <Route path="/contact" element={<Contact />}></Route>
         <Route
           path="/login"
-          element={
-            <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-          }
+          element={<Login setIsLoggedIn={setIsLoggedIn} />}
         ></Route>
         <Route path="/users" element={<Users />}></Route>
         <Route path="/products" element={<Products />}></Route>
       </Routes>
-
+      <ToastContainer className="z-10 mt-24" />
       <Footer />
     </div>
   );
