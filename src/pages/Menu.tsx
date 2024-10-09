@@ -1,7 +1,7 @@
 import coronaImage from "/corona.svg";
 import SwiperProducts from "../components/SwiperProducts";
 import { useEffect, useState } from "react";
-import { toast } from "react-toastify";
+import { API_BASE_URL } from "../constants";
 
 const Menu = () => {
   const [hamburguers, setHamburguers] = useState([]);
@@ -10,7 +10,7 @@ const Menu = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/products");
+        const response = await fetch(`${API_BASE_URL}/products`);
         const data = await response.json();
         setHamburguers(data.filter((_: any) => _.categoryId === 1));
         setDrinks(data.filter((_: any) => _.categoryId === 2));
