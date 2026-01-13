@@ -1,30 +1,30 @@
-# Cómo ejecutar el proyecto
+# How to Run the Project
 
-Para realizar la ejecución del proyecto, previamente debe tener instalado node js en sus computador y seguir los siguientes pasos:
+To run the project, make sure you have Node.js installed on your computer, then follow these steps:
 
-1. **Clona el repositorio**:
+1. **Clone the repository**:
     ```bash
     git clone https://github.com/bscantor23/burguer_republic.git
     ```
 
-2. **Navega al directorio del proyecto**:
+2. **Navigate to the project directory**:
     ```bash
     cd burguer_republic
     ```
 
-3. **Instala las dependencias**:
+3. **Install dependencies**:
     ```bash
     npm install
     ```
 
-4. **Inicia el servidor de desarrollo**:
+4. **Start the development server**:
     ```bash
     npm run dev
     ```
 
-5. **Abre tu navegador** y navega a `http://localhost:5173/` para ver la aplicación en funcionamiento.
+5. **Open you browser** and go to `http://localhost:5173/` to see the application running.
 
-¡Y eso es todo! Ahora deberías poder visualizar el proyecto realizado con React, Vite y Tailwind CSS
+That’s it! You should now be able to view the project built with React, Vite, and Tailwind CSS.
 
 ![alt text](image.png)
 
@@ -32,4 +32,4 @@ Para realizar la ejecución del proyecto, previamente debe tener instalado node 
 
 ![alt text](image-2.png)
 
-**Nota:** ¡Actualmente el prototipo ya es Responsivo!
+**Nota:** The prototype is currently fully responsive.
